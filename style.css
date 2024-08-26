@@ -1,0 +1,935 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    background-color: #F3F5FC;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.textArea-btn{
+    width: 140%;
+    height: 84vh;
+    margin-left: 3em;
+}
+
+.text-area{
+    width: 85%;
+    height: 55vh;
+    margin: 1em 0 0 0;
+    
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    resize: none;
+    color: #0A3871;
+    background-color: #F3F5FC;
+}
+
+::placeholder {
+    color: #0A3871;
+    ;
+}
+
+.advertencia {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-size: 1.1rem;
+    color: #495057;
+    opacity: 0.8;
+}
+
+
+.btn-encriptar,
+.btn-desencriptar {
+    width: 40%;
+    height: 9vh;
+    font-size: 1.5rem;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    border: none;
+}
+
+.btn-desencriptar {
+    background-color: #F3F5FC;
+    border: 1px solid;
+}
+
+.btn-encriptar:hover {
+    background-color: #00473e;
+    color: white;
+    border: 1px solid;
+    transform: scaleX(1.1);
+}
+
+.btn-desencriptar:hover {
+    background-color: #3da9fc;
+    color: #F3F5FC;
+    border: none;
+    transform: scaleX(1.1);
+}
+
+/*Segunda parte, div con imagen y parrafos, y otro div con textarea y el boton copiar*/
+
+.img-parrafos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 84vh;
+    width: 80%;
+    border-radius: 1.5em;
+    box-shadow: 5px 5px 15px 15px #BBB;
+    background-color: #FFFFFF;
+}
+
+.imagen-m {
+    width: 75%;
+    margin-top: 5em;
+}
+
+.img-parrafos h2{
+    width: 60%;
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 1.7rem;
+}
+
+.img-parrafos p{
+    width: 70%;
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+}
+
+.ocultar{   /* Paras ocultar el div que contiene el munñeco y los mensajes */
+    display: none !important;
+}
+
+
+
+#resultadoArea-btn{ /* Para ocultar el div que contiene el textArea y el boton copiar */
+    display: none;
+    
+}
+    
+.btn-textArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 84vh;
+    width: 80%;
+    border-radius: 1.5em;
+    box-shadow: 5px 5px 15px 15px #BBB;
+    background-color: #FFFFFF;
+}
+
+.text-resultado {
+    width: 70%;
+    height: 40vh;
+    font-size: 1.567rem;
+    color: #0A3871;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-top: 1em;
+}
+
+.btn-escuchar {
+    height: 16vh;
+    width: 30%;
+    margin-top: 1em;
+    border: none;
+    border-radius: 100%;
+    font-size: 1.4rem;
+    background-color: #f25f4c;
+    color: whitesmoke;
+}
+
+.btn-escuchar:active {
+    background-color: #2cb67d;
+}
+
+.btn-copiar{
+    width: 60%;
+    height: 12%;
+    font-size: 1.4rem;
+    margin-top: 1em;
+    border-radius: 2em;
+    border: 1px solid #495057;
+    background-color: #e3f6f5;
+    transition: 1s all;
+}
+
+#copiar:hover {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    border: none;
+}
+
+footer{
+    height: 2em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p{
+    font-size: 1rem;
+}
+
+.logo-git {
+    width: 1.5vw;
+}
+
+
+@media screen and (max-width: 361px){
+
+    .logo-alura{
+        width: 25vw;
+        margin-top: 1em;
+    }
+
+    .textArea-btn{
+        margin-left: 0em;
+    }
+    
+    .text-area{
+        font-size: 1.7rem;
+    }
+
+    #mensaje{
+        height: 40vh;
+    }
+
+    #letra-advertencia{
+        font-size: 0.8rem;
+        margin: 1em 0;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar {
+        height: 9vh;
+        margin: 0.5em 0;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px){
+    body{
+        position: static;
+    }
+
+    .logo{
+        margin: 0 0 0 0;
+    }
+
+    .logo-alura{
+        margin-top: 1em;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textArea-btn{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0em;
+        
+    }
+
+    .text-area{
+        width: 85%;
+        height: 45vh;
+        margin: 1em 0 0 0;
+    }
+
+    .advertencia {
+        margin-top: 0.5em;
+        font-size: 1.4rem;
+        margin-left: 0;
+    }
+    
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 85%;
+        margin-top: 0.5em;
+        margin-left: 0;
+        margin-bottom: 0.5em;
+    }
+
+    .contenedor-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-parrafos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        margin-left: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .imagen-m {
+        display: none;
+    }
+
+    .img-parrafos h2{
+        width: 80%;
+        margin-top: 1em;
+        font-weight: 1000;
+    }
+    
+    .img-parrafos p{
+        width: 85%;
+        margin-bottom: 1.5em;
+    }
+
+    #resultadoArea-btn{
+        display: none;
+    }
+
+    .btn-resultado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-textArea{
+        height: 70vh;
+        width: 90%;
+        margin-left: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .text-resultado {
+        width: 85%;
+        height: 50vh;
+        font-size: 2rem;
+    }
+    
+    .btn-escuchar {
+        display: none !important;
+    }
+
+    .btn-copiar{
+        margin-top: 1em;
+    }
+    
+
+    footer{
+        position: static;
+        margin-top: 0.5em;
+    }
+    
+    
+}
+
+@media (max-width: 600px) and (min-width: 481px){
+    body{
+        position: static;
+    }
+
+    .logo{
+        margin: 1em 0 0 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textArea-btn{
+        width: auto; 
+        height: 70vh;
+        margin-left: 0em;
+    }
+
+    .text-area{
+        width: 85%;
+        height: 45vh;
+        margin-top: 1em;
+        margin-left: 1em;
+        font-size: 2.5rem;
+    }
+
+    .advertencia {
+        margin-top: 0.5em;
+        font-size: 1.4rem;
+        margin-left: 1em;
+    }
+    
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 45%;
+        margin-top: 0.5em;
+        margin-left: 0.7em;
+        margin-bottom: 0.5em;
+    }
+
+    .contenedor-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-parrafos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        margin-left: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .imagen-m {
+        display: none;
+    }
+
+    .img-parrafos h2{
+        width: 80%;
+        margin-top: 1em;
+        font-weight: 1000;
+    }
+    
+    .img-parrafos p{
+        width: 85%;
+        margin-bottom: 1.5em;
+    }
+
+    #resultadoArea-btn{
+        display: none;
+    }
+
+    .btn-resultado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-textArea{
+        height: 50vh;
+        width: 94.7%;
+        margin-left: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .text-resultado {
+        width: 85%;
+        height: 25vh;
+        font-size: 2rem;
+    }
+    
+    .btn-escuchar {
+        display: none !important;
+    }
+
+    .btn-copiar{
+        width: 80%;
+        height: 10vh;
+        margin-top: 1em;
+        font-size: 2rem;
+    }
+    
+
+    footer{
+        position: static;
+        margin-top: 0.5em;
+    }
+    
+    
+}
+
+
+@media (max-width: 800px) and (min-width: 601px){
+    
+    body{
+        position: static;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        margin: 1em 0 0 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .textArea-btn{
+        width: auto; 
+        height: 70vh;
+    }
+
+    .text-area{
+        width: 85%;
+        height: 45vh;
+        margin-top: 1em;
+        margin-left: 1.4em;
+        font-size: 2.5rem;
+    }
+
+    .advertencia {
+        margin-top: 0.5em;
+        font-size: 1.4rem;
+        margin-left: 1em;
+    }
+    
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 45%;
+        margin-top: 0.5em;
+        margin-left: 1.4rem;
+        margin-bottom: 0.5em;
+    }
+
+    .contenedor-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-parrafos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        margin-left: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .imagen-m {
+        display: none;
+    }
+
+    .img-parrafos h2{
+        width: 80%;
+        margin-top: 1em;
+        font-weight: 1000;
+    }
+    
+    .img-parrafos p{
+        width: 85%;
+        margin-bottom: 1.5em;
+    }
+
+    #resultadoArea-btn{
+        display: none;
+    }
+
+    .btn-resultado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-textArea{
+        height: 50vh;
+        width: 95%;
+        margin-left: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .text-resultado {
+        width: 85%;
+        height: 25vh;
+        font-size: 3rem;
+    }
+    
+    .btn-escuchar {
+        display: none !important;
+    }
+
+    .btn-copiar{
+        width: 80%;
+        height: 10vh;
+        margin-top: 1.5em;
+        font-size: 2rem;
+    }
+    
+
+    footer{
+        position: static;
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (max-width: 929px) and (min-width: 801px){
+
+    body{
+        position: static;
+        min-height: 100vh;
+    }
+
+    .logo{
+        margin: 1em 0 0 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .textArea-btn{
+        width: auto; 
+        height: 70vh;
+    }
+
+    .text-area{
+        width: 85%;
+        height: 45vh;
+        margin-top: 1em;
+        margin-left: 1.4em;
+        font-size: 3rem;
+    }
+
+    .advertencia {
+        margin-top: 0.5em;
+        font-size: 1.5rem;
+        margin-left: 1em;
+    }
+    
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 45%;
+        margin-top: 0.5em;
+        margin-left: 1.4rem;
+        margin-bottom: 0.5em;
+        font-size: 2.5rem;
+    }
+
+    .contenedor-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-parrafos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 30vh;
+        width: 90%;
+        margin-left: 0;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+    
+    .imagen-m {
+        display: none;
+    }
+
+    .img-parrafos h2{
+        width: 80%;
+        margin-top: 1em;
+        font-size: 2.5rem;
+        font-weight: 1000;
+    }
+    
+    .img-parrafos p{
+        width: 85%;
+        margin-bottom: 1.5em;
+        font-size: 2rem;
+    }
+
+    #resultadoArea-btn{
+        display: none;
+    }
+
+    
+    .btn-textArea{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+        width: 90vw;
+        margin-left: 0;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+    
+    .text-resultado {
+        width: 85%;
+        height: 30vh;
+        font-size: 3rem;
+    }
+    
+    .btn-escuchar {
+        display: none !important;
+    }
+
+    .btn-copiar{
+        width: 80%;
+        height: 8vh;
+        margin-top: 0.5em;
+        font-size: 2.5rem;
+    }
+    
+
+    footer{
+        position: static;
+        margin-top: 1em;
+
+    }
+    
+}
+
+
+@media (max-width: 1270px) and (min-width: 930px){
+
+    body{
+        position: relative;
+        min-height: 100vh;
+        background-color: #F3F5FC;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo{
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+    .logo-alura{
+        width: 10vw;
+    }
+    
+    main{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .textArea-btn{
+        width: 65vw;
+        height: 80vh;
+    }
+    
+    .text-area{
+        width: 50vw;
+        height: 55vh;
+        margin: 1em 0 0 0;
+        margin-left: 3em;
+        font-size: 1.7rem;
+        border: none;
+        outline: none;
+        resize: none;
+        color: #0A3871;
+        background-color: #F3F5FC;
+    }
+    
+    ::placeholder {
+        color: #0A3871;
+        ;
+    }
+    
+    .advertencia {
+        margin-top: 0.5em;
+        margin-left: 4.5em;
+        font-size: 1rem;
+        color: #495057;
+        opacity: 0.8;
+    }
+    
+    
+    .btn-encriptar,
+    .btn-desencriptar {
+        width: 40%;
+        height: 9vh;
+        font-size: 1.5rem;
+        margin-top: 0.5em;
+        margin-left: 1em;
+        border-radius: 2em;
+        cursor: pointer;
+        transition: 1s all;
+    }
+    
+    .btn-encriptar {
+        background-color: #0A3871;
+        color: #F3F5FC;
+        border: none;
+        margin-left: 3em;
+    }
+    
+    .btn-desencriptar {
+        background-color: #F3F5FC;
+        border: 1px solid;
+    }
+    
+    .btn-encriptar:hover {
+        background-color: #00473e;
+        color: white;
+        border: 1px solid;
+        transform: scaleX(1.1);
+    }
+    
+    .btn-desencriptar:hover {
+        background-color: #3da9fc;
+        color: #F3F5FC;
+        border: none;
+        transform: scaleX(1.1);
+    }
+    
+    /*Segunda parte, div con imagen y parrafos, y otro div con textarea y el boton copiar*/
+    
+    .img-parrafos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        width: 70%;
+        margin-left: 4em;
+        border-radius: 1.5em;
+        box-shadow: 5px 5px 15px 15px #BBB;
+        background-color: #FFFFFF;
+    }
+    
+    .imagen-m {
+        width: 70%;
+        margin-top: 5em;
+    }
+    
+    .img-parrafos h2{
+        width: 80%;
+        text-align: center;
+        margin-top: 0.5em;
+        font-size: 1.5rem;
+    }
+    
+    .img-parrafos p{
+        width: 85%;
+        text-align: center;
+        margin-top: 0.5em;
+        font-size: 1rem;
+    }
+    
+    .ocultar{   /* Paras ocultar el div que contiene el munñeco y los mensajes */
+        display: none !important;
+    }
+    
+    #resultadoArea-btn{ /* Para ocultar el div que contiene el textArea y el boton copiar */
+        display: none;
+    }
+        
+    .btn-textArea{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        width: 70%;
+        margin-left: 4em;
+        border-radius: 1.5em;
+        box-shadow: 5px 5px 15px 15px #BBB;
+        background-color: #FFFFFF;
+    }
+    
+    .text-resultado {
+        width: 90%;
+        height: 30vh;
+        font-size: 1.567rem;
+        color: #0A3871;
+        border: none;
+        outline: none;
+        resize: none;
+        margin-top: 1em;
+    }
+    
+    .btn-escuchar {
+        height: 16vh;
+        width: 40%;
+        margin-top: 1em;
+        border: none;
+        border-radius: 100%;
+        font-size: 1.2rem;
+        color: whitesmoke;
+    }
+    
+    .btn-escuchar:active {
+        background-color: #2cb67d;
+    }
+    
+    .btn-copiar{
+        width: 70%;
+        height: 12%;
+        font-size: 1.2rem;
+        margin-top: 3em;
+        border-radius: 2em;
+        border: 1px solid #495057;
+        background-color: #e3f6f5;
+        transition: 1s all;
+    }
+    
+    #copiar:hover {
+        background-color: #0A3871;
+        color: #F3F5FC;
+        border: none;
+    }
+    
+    footer{
+        height: 2em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    footer p{
+        font-size: 1rem;
+    }
+    
+    .logo-git {
+        width: 1.5vw;
+    }
+
+}
